@@ -5,4 +5,64 @@
   header {
     margin: 2.5rem 0 1.5625rem 0;
   }
+
+  main {
+    padding: 0 0.625rem 2.5rem;
+
+    .post {
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--heading);
+
+        &:hover {
+          color: var(--highlight);
+        }
+      }
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 1.125rem;
+      }
+
+      .info {
+        margin-top: 1.5rem;
+        font-size: 0.875rem;
+        
+        display: flex;
+        align-items: center;
+
+        span {
+          display: flex;
+          align-items: center;
+
+          svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+          }
+
+          & + span {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+
+      & + .post {
+        margin-top: 3rem;
+      }
+    }
+
+    strong {
+      display: block;
+      margin-top: 3rem;
+
+      font-size: 1.125rem;
+      color: var(--highlight);
+      font-weight: 600;
+
+      cursor: pointer;
+    }
+
+  }
 }
