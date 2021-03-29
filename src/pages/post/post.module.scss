@@ -33,6 +33,48 @@
       color: var(--heading);
       margin-bottom: 3rem;
     }
+
+    .content {
+      font-size: 1.125rem;
+      line-height: 1.4rem;
+
+      p, 
+      ul, 
+      ol {
+        & + p, 
+        & + ul, 
+        & + ol {
+          margin-top: 1.5rem;
+        }
+      }
+
+      p {
+
+        a {
+          color: var(--highlight);
+          transition: 0.2s;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      ul, ol {
+        li {
+          margin-left: 0;
+          margin-left: 1.5rem;
+
+          & + li {
+            margin-top: 0.8rem;
+          }
+
+          &::marker {
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 
 }

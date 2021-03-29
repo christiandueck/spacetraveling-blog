@@ -1,13 +1,11 @@
 .content {
     .post {
+      display: block;
+
       h1 {
         font-size: 1.75rem;
         font-weight: 700;
         color: var(--heading);
-
-        &:hover {
-          color: var(--highlight);
-        }
       }
 
       p {
