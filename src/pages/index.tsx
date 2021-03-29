@@ -60,17 +60,16 @@ export default function Home({ postsPagination }: HomeProps) {
           setPosts(posts.concat(newPosts));
         });
     }
-    console.log(posts);
   }
 
   return (
-    <div className={styles.container}>
+    <div className={commonStyles.container}>
       <Head>
         <title>spacetraveling.</title>
       </Head>
-      <Header />
+      <Header home={true} />
 
-      <main>
+      <main className={styles.content}>
         {posts.map(post => (
           <div className={styles.post} key={post.uid}>
             <Link href={`/post/${post.uid}`}>
@@ -79,7 +78,7 @@ export default function Home({ postsPagination }: HomeProps) {
               </a>
             </Link>
             <p>{post.data.subtitle}</p>
-            <div className={styles.info}>
+            <div className={commonStyles.info}>
               <span><FiCalendar />{post.first_publication_date}</span>
               <span><FiUser />{post.data.author}</span>
             </div>
